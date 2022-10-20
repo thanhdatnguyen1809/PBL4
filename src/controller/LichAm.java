@@ -143,7 +143,8 @@ public class LichAm {
      * @param timeZone
      * @return array of [lunarDay, lunarMonth, lunarYear, leapOrNot]
      */
-    public static String convertSolar2Lunar(int dd, int mm, int yy, double timeZone) {
+    public static String convertSolar2Lunar(int dd, int mm, int yy) {
+    	double timeZone = 7.0;
         int lunarDay, lunarMonth, lunarYear, lunarLeap;
         int dayNumber = jdFromDate(dd, mm, yy);
         int k = INT((dayNumber - 2415021.076998695) / 29.530588853);
@@ -179,11 +180,11 @@ public class LichAm {
         if (lunarMonth >= 11 && diff < 4) {
             lunarYear -= 1;
         }
-        return lunarDay+"/"+lunarMonth;
+        return lunarDay +"";
     }
 
     public static void main(String[] args) {
     	
-    	System.out.println(convertSolar2Lunar(2, 3, 2022,7.0));
+    	System.out.println(convertSolar2Lunar(2, 3, 2022));
     }
 }
