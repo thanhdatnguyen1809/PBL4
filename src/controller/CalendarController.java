@@ -41,11 +41,7 @@ public class CalendarController {
 	 
 	        current = k;
 	        
-	        if(i%4 == 0) {
-	        	System.out.printf("\n\n\n\n\n\n\n\n\n\n\n");
-	        }else {
-	        	System.out.println("\t\t");
-	        }
+	        
 	    }
 	 
 	    return;
